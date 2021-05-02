@@ -9,5 +9,4 @@ spl_autoload_register(function ($class_name) {
 if (!isset($_GET['action'])) {
     $_GET['action'] = 'index';
 }
-
 require "controllers/Controller.php";

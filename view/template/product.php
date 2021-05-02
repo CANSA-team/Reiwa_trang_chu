@@ -59,12 +59,14 @@ getHeader();
 								</a>
 							</div>
 							<div class="nd_sptc bg_w">
-								<div class="ten_sptc"><?php
-														$str = strip_tags($item['description']);
-														if (strlen($str) > 100) {
-															$str = substr($str, 0, 100) . '...';
-														}
-														echo $str; ?>
+								<div class="ten_sptc">
+									<?php
+									$str = strip_tags($item['description']);
+									if (strlen($str) > 100) {
+										$str = substr($str, 0, 100) . '...';
+									}
+									echo $str;
+									?>
 								</div>
 
 							</div>

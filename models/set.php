@@ -11,7 +11,7 @@ function  setContent2()
     return $postModel->get_GioiThieu();
 }
 
-function  setContent3()
+function setContent3()
 {
     $themeModel = new ThemeModel();
     $theme3 = $themeModel->getTheme('content_3');
