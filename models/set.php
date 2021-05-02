@@ -219,15 +219,9 @@ function setBar()
 
 function setNavBar()
 {
-    $categoryModel = new CategoryModel();
-    $themeModel = new ThemeModel();
-    $navBar = $themeModel->getTheme('navbar');
-    $categories = $categoryModel->getCategories();
-    $list = [
-        'categories' => $categories,
-        'navbar' => $navBar
-    ];
-    return $list;
+    $navbarModel = new NavBarModel();
+    $navbar = $navbarModel->getNavBar();
+    return $navbar;
 }
 
 

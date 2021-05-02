@@ -1,6 +1,6 @@
 <?php
 $page = setPage();
-if($page['id_classify']==1 || $page['id_classify']==2 || $page['id_classify']==3|| $page['id_classify']==4|| $page['id_classify']==5|| $page['id_classify']==9){
+if(empty($page['final_time'])){
     Model::updatePostView($page['id'],$page['view_count']+1);
 }
 else{
