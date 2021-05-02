@@ -15,7 +15,7 @@ function  setContent3()
 {
     $themeModel = new ThemeModel();
     $theme3 = $themeModel->getTheme('content_3');
-    $img = explode(',',$theme3['img']);
+    $img = explode(',', $theme3['img']);
     return $img;
 }
 
@@ -24,8 +24,8 @@ function  setContent4()
     $categoryModel = new CategoryModel();
     $productModel = new ProductModel();
     $productList = $productModel->getProductNew();
-    $categoryList =$categoryModel->getCategories();
-    $result= [0=>$productList,1=>$categoryList];
+    $categoryList = $categoryModel->getCategories();
+    $result = [0 => $productList, 1 => $categoryList];
     return $result;
 }
 
@@ -164,10 +164,10 @@ function setPage()
             $postModel = new PostModel();
             $page = $postModel->get_GioiThieu();
             break;
-            case 'lien_he':
-                $postModel = new PostModel();
-                $page = $postModel->get_LienHe();
-                break;
+        case 'lien_he':
+            $postModel = new PostModel();
+            $page = $postModel->get_LienHe();
+            break;
         case 'du_an':
         case 'tin_tuc':
             $postModel = new PostModel();
@@ -217,21 +217,17 @@ function setBar()
     return $list;
 }
 
-function setNavBar(){
-    $categoryModel = new CategoryModel();
-    $themeModel = new ThemeModel();
-    $navBar = $themeModel->getTheme('navbar');
-    $categories = $categoryModel->getCategories();
-    $list = [
-        'categories' => $categories,
-        'navbar' => $navBar
-    ];
-return $list;
+function setNavBar()
+{
+    $navbarModel = new NavBarModel();
+    $navbar = $navbarModel->getNavBar();
+    return $navbar;
 }
 
 
-function setHeader(){
-    if(empty($_GET['type'])){
+function setHeader()
+{
+    if (empty($_GET['type'])) {
         return 'ReiHouse';
     }
     $arrTitlePage = [

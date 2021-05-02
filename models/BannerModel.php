@@ -1,3 +1,4 @@
+
 <?php
 class BannerModel extends Db
 {
