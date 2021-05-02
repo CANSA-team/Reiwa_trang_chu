@@ -12,9 +12,13 @@ $content2 = setContent2();
             <h1><?php echo $content2['name'] ?></h1>
             <div style="border-left: 4px solid; border-color: #1a75bc;  padding-left: 20px; margin-top: 20px;">
                 <span>
-                    <p><?php $str = strip_tags($content2['description']);
-                            $str = substr($str, 0, 333) . '...';
-                            echo $str; ?></p>
+                    <p>
+                        <?php
+                        $str = strip_tags($content2['description']);
+                        $str = substr($str, 0, 333) . '...';
+                        echo $str;
+                        ?>
+                    </p>
                 </span>
             </div>
         </div>

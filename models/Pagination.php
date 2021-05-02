@@ -3,8 +3,6 @@ class Pagination
 {
     public static function createPageLink($totalRow, $perPage, $page)
     {
-        
-
         $numberPage = ceil($totalRow / $perPage);
         $next = $page;
         $disableNext = '';
@@ -46,8 +44,8 @@ class Pagination
         }
 
         for ($i = $begin; $i <= $end; $i++) {
-            $active = ($i == $page)?'active"><span >' . $i . ' </span>':'"><a class="page-link" href="?'  . 'page=' . $i . $link . '"><span >' . $i . ' </span></a>';
-            $output .= '<li class="page-item '.$active.'</li>';
+            $active = ($i == $page) ? 'active"><span >' . $i . ' </span>' : '"><a class="page-link" href="?'  . 'page=' . $i . $link . '"><span >' . $i . ' </span></a>';
+            $output .= '<li class="page-item ' . $active . '</li>';
         }
 
         if ($page + 2 < $numberPage) {
@@ -58,8 +56,7 @@ class Pagination
             <li class="page-item" ' . $disableNext . '><a class="page-link" href="?'  . 'page=' . $next . $link . '"><span >Trang Sau</span></a></li>
             <li class="page-item" ' . $disableNext . '><a class="page-link" href="?'  . 'page=' . $numberPage . $link . '"><span >Trang Cuối</span></a></li>
         </ul>
-        </nav>'
-        ;
+        </nav>';
         return $output;
     }
 }

@@ -140,8 +140,3 @@ $contact = $contactModel->getContact();
         </div>
 
     </nav>
-
-
-    <script>
-        
-    </script>

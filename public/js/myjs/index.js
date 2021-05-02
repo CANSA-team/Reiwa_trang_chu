@@ -2,7 +2,6 @@ var slideIndex = 1;
 const items = document.querySelectorAll('.nav-text-style');
 const background = "#007cba";
 const color = "white";
-const btn_xem_them = document.getElementById("dropdownMenuButton");
 var view_more = document.getElementById("xemthem");
 let view = document.getElementById("product-category");
 const id_staff = document.querySelectorAll('#staff-id');
@@ -61,14 +60,7 @@ document.querySelectorAll('.nav-text-style-1').forEach((item) => {
     })
 });
 
-btn_xem_them.addEventListener('click', function () {
-    if (!view_more.classList.contains("show")) {
-        view_more.classList.add('show');
-    } else {
-        view_more.classList.remove('show');
-    }
 
-});
 
 function GET_PRODUCE(id) {
     console.log(id);
