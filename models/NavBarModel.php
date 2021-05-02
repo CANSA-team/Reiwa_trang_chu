@@ -11,8 +11,8 @@ class NavBarModel extends Db
     //lấy danh sách DropdownNavBar
     public function getDropdownNavBar($id)
     {
-        $sql = parent::$conection->prepare('SELECT * FROM `dropdown` WHERE `id`=?');
+        $sql = parent::$conection->prepare('SELECT * FROM `dropdown` WHERE `navbar_id`=?');
         $sql->bind_param('i',$id);
-        return parent::select($sql)[0]['url'];
+        return parent::select($sql);
     }
 }
