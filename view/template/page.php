@@ -1,10 +1,9 @@
 <?php
 $page = setPage();
-if(empty($page['final_time'])){
-    Model::updatePostView($page['id'],$page['view_count']+1);
-}
-else{
-    Model::updateProductView($page['id'],$page['view']+1);
+if (empty($page['final_time'])) {
+    Model::updatePostView($page['id'], $page['view_count'] + 1);
+} else {
+    Model::updateProductView($page['id'], $page['view'] + 1);
 }
 getHeader();
 ?>
@@ -13,13 +12,13 @@ getHeader();
         <div class="row fix-safari">
             <div class="col-xs-12 col-md-8 col-lg-9">
                 <article class="box_content read bg_white m-t-12">
-                    <header class="title col-xs-12">
+                    <div class="title_page col-xs-12">
                         <div class="title_right">
                             <div class="title_center">
                                 <span class="uppercaseText" style="font-weight: bold; text-transform: uppercase;"><?php echo $page['name'] ?></span>
                             </div> <!--  end .title_center -->
                         </div> <!--  end .title_right -->
-                    </header> <!--  end .title -->
+                    </div> <!--  end .title -->
                     <div class="des col-xs-12 text-justify" style="margin-top: 20px;">
                         <!-- content -->
                         <?php echo $page['description'] ?>

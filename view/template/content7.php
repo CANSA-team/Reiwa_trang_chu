@@ -12,7 +12,7 @@ $content7 = setContent7();
                     <?php
                     foreach ($content7 as $value) {
                     ?>
-                        <img src="<?php echo $value['image'] ?>" alt="" width="50px" height="50px" style="margin-right: 10px;" id="staff-id">
+                        <img class="img-fluid" src="<?php echo $value['image'] ?>" alt="" width="50px" height="50px" style="margin-right: 10px; overflow: hidden; filter: brightness(1.1) contrast(0.96) saturate(1.37);" id="staff-id">
                     <?php
                     }
                     ?>

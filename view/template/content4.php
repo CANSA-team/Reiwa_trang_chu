@@ -27,37 +27,38 @@ $product = $data[0];
                 ?>
             </div>
         </div>
-
     </div>
 
-
     <div class="row" id="product-category">
-
-
-
         <a href="chi_tiet_san_pham.php?Lorem-ipsum-dolor-sit-amet-consectetur-adipisicing-elit.-2">
         </a>
         <?php
         $count = (count($product) < 8) ? count($product) : 8;
         for ($i = 0; $i < $count; $i++) {
         ?>
-            <div class="col-md-3 col-xs-6 "><a href="<?php echo URL_PAGE_DAU_AN_CONG_TRINH .  '&id=' . $product[$i]['id'] ?>">
-                    <img src="
-                    <?php if (empty($product[$i]['photo'])) {
-                        echo DEFAULT_IMG;
-                    } else {
-                        echo $product[$i]['photo'];
-                    } ?>" alt="" style="padding-top: 25px; height: 250px; width: 100%;">
-                </a>
+            <div class="col-md-3 col-xs-6 ">
+                    <div class="hieu_ung">
+
+                        <div class="noi_dung">
+                            <a href="<?php echo URL_PAGE_DAU_AN_CONG_TRINH .  '&id=' . $product[$i]['id'] ?>">
+                                <img src="<?php 
+                                                echo DEFAULT_IMG;
+                                             ?>" alt="" class="sp img-fluid" style="padding-top: 25px; height: 250px; width: 100%; overflow: hidden; filter: brightness(1.1) contrast(0.96) saturate(1.37);">
+
+                                <div class="title">
+                                    <div class="thong_tin">sadas dsad</div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
             </div>
         <?php
         }
         ?>
-
-
     </div>
     <div class="btn-more-product2"><a href="<?php echo URL_DAU_AN_CONG_TRINH . '&id=' /*. $value['id']*/ ?>" style="padding-left: 20px; padding-right: 20px; padding-bottom: 5px;padding-top: 5px; background: #1a75bc
             ; color: white;">Xem tất cả</a>
     </div>
-
 </div>

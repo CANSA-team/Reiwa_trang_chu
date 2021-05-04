@@ -18,15 +18,27 @@ function getImgByCategoryId($id)
     $css = "";
     $str = "";
     $i = 0;
-    foreach ($sanphamList as $key => $item) {
+    foreach ($sanphamList as $item) {
         if ($i != 0) {
             $i = 1;
             $css = "repo-product";
         }
 
-        $str .=    '<div class="col-md-3 col-xs-6 "><a href="' .  URL_PAGE_DAU_AN_CONG_TRINH .  '&id=' . $item['id'] . '">
-        <img src="' .  $item['photo'] . '" alt="" style="padding-top: 25px; height: 250px; width: 100%;">
-    </a>
+        $str .=    '<div class="col-md-3 col-xs-6 ">
+        <div class="hieu_ung">
+
+            <div class="noi_dung">
+                <a href="'.URL_PAGE_DAU_AN_CONG_TRINH .  '&id=' . $item[$i]['id'].'">
+                    <img src="'. DEFAULT_IMG .'" alt="" class="sp img-fluid" style="padding-top: 25px; height: 250px; width: 100%; overflow: hidden; filter: brightness(1.1) contrast(0.96) saturate(1.37);">
+
+                    <div class="title">
+                        <div class="thong_tin">'.$item[$i]['name'].'</div>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
 </div>';
     }
     return $str;
