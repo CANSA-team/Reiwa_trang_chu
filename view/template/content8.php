@@ -9,7 +9,7 @@ $content8 = setContent8();
             <?php
             foreach ($content8 as $value) {
             ?>
-            <div class="slide"><img src="<?php echo $value['image'] ?>"></div>
+            <div class="slide img-fluid"><img src="<?php echo $value['image'] ?>" style="overflow: hidden; filter: brightness(1.1) contrast(0.96) saturate(1.37);"></div>
             <?php
             }
             ?>

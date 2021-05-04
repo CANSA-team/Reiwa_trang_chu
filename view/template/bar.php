@@ -35,11 +35,7 @@ $bar = setBar();
                 ?>
                     <div class="pull-left">
                         <a href="<?php echo $url.'&id='.$value['id'] ?>" title="<?php echo $value['name'] ?>" target="_self" class="">
-                        <img src="<?php if (empty($value['photo'])) {
-                                                    echo DEFAULT_IMG;
-                                                } else {
-                                                    echo $value['photo'];
-                                                } ?>"  width="100%" height="200px" class="pull-left m-r-15">
+                        <img src="<?php echo DEFAULT_IMG; ?>"  width="100%" height="200px" class="pull-left m-r-15 img-fluid" style="overflow: hidden; filter: brightness(1.1) contrast(0.96) saturate(1.37);">
                         </a>
                         <a href="<?php echo $url.'&id='.$value['id'] ?>" title="<?php echo $value['name'] ?>" target="_self" class="name font-bold"><?php echo $value['name'] ?></a>
                         <p class="sumary"><?php

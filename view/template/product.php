@@ -42,16 +42,18 @@ getHeader();
 
 					<div class="col-md-3 pd-15">
 						<div class="product-item">
-							<div class="border-item">
-								<div class="hover-item">
+							<div class="hieu_ung1">
+								<div class="noi_dung1">
 									<a href="<?php echo URL_PAGE . $_GET['type'] .  '&id=' . $item['id'] ?>" title="<?php echo $item['name'] ?>">
-										<img style="max-width: 100%;" src="<?php if (empty($item['photo'])) {
-																				echo DEFAULT_IMG;
-																			} else {
-																				echo $item['photo'];
-																			} ?>" alt="<?php echo $item['name'] ?>">
+										<img class="sp img-fluid" style="max-width: 100%; overflow: hidden; filter: brightness(1.1) contrast(0.96) saturate(1.37);" src="<?php echo DEFAULT_IMG; ?>" alt="<?php echo $item['name'] ?>">
+
+										<div class="title1">
+											<div class="thong_tin1"><?php echo $item['name'] ?></div>
+										</div>
 									</a>
 								</div>
+
+
 							</div>
 							<div class="ten_sptc">
 								<a href="<?php echo URL_PAGE . $_GET['type'] .  '&id=' . $item['id']  ?>" title="<?php echo $item['name'] ?>">
@@ -91,6 +93,8 @@ getHeader();
 		}
 	}
 	?>
+
+</div>
 	<?php
 	if (!empty($_GET['id'])) {
 		if ($totalRow >= $perPage) {

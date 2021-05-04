@@ -6,14 +6,10 @@ $postContent6 = $content6[1];
 <div class="container" style="margin-top: 50px; margin-bottom: 50px;">
     <div class="row">
         <div class="col-md-6">
-            <h1 style="margin-bottom: 20px;">THÔNG TIN HỮU ÍCH</h1>
+            <h1 style="margin-bottom: 20px; text-transform: uppercase;">THÔNG TIN HỮU ÍCH</h1>
             <a href="<?php echo URL_PAGE_DU_AN . '&id=' . $postContent6[0]['id'] ?>">
                 <img src="
-                <?php if (empty($postContent6[0]['photo'])) {
-                    echo DEFAULT_IMG;
-                } else {
-                    echo $postContent6[0]['photo'];
-                } ?>" alt="" style="width: 100%; height: 315px;margin-bottom: 15px;">
+                <?php echo DEFAULT_IMG; ?>" alt="" class="img-fluid" style="max-width: 100%; width: auto; height: 315px; margin-bottom: 15px; overflow: hidden; filter: brightness(1.1) contrast(0.96) saturate(1.37);">
 
                 <h5>
                     <?php echo $postContent6[0]['name'] ?> </h5>
@@ -37,11 +33,7 @@ $postContent6 = $content6[1];
                 ?>
                     <div class="row mb-4">
                         <div class="col-md-4">
-                            <img src="<?php if (empty($postContent6[$i]['photo'])) {
-                                            echo DEFAULT_IMG;
-                                        } else {
-                                            echo $postContent6[$i]['photo'];
-                                        } ?>" alt="" style="width: 100%; height: 215px;">
+                            <img src="<?php echo DEFAULT_IMG; ?>" alt="" class="img-fluid" style="max-width: 100%; width: auto; height: 215px; overflow: hidden; filter: brightness(1.1) contrast(0.96) saturate(1.37);">
                         </div>
                         <div class="col-sm-8" style="margin-bottom: 20px;">
                             <a href="<?php echo URL_PAGE_DU_AN . '&id=' . $postContent6[$i]['id'] ?>">
@@ -74,15 +66,11 @@ $postContent6 = $content6[1];
 
 
         <div class="col-md-6">
-            <h1 style="margin-bottom: 20px;">GIẢI PHÁP THIẾT KẾ</h1>
+            <h1 style="margin-bottom: 20px; text-transform: uppercase;">GIẢI PHÁP THIẾT KẾ</h1>
             <div class="row" style="margin-bottom: 50px;">
                 <div class="col-md-6">
                     <img src="
-                    <?php if (empty($productContent6[0]['photo'])) {
-                        echo DEFAULT_IMG;
-                    } else {
-                        echo $productContent6[0]['photo'];
-                    } ?>" alt="" style="width: 100%; height: 315px;">
+                    <?php echo DEFAULT_IMG; ?>" alt="" style="max-width: 100%; width: auto; height: 315px; overflow: hidden; filter: brightness(1.1) contrast(0.96) saturate(1.37);">
                 </div>
                 <div class="col-sm-6" style="margin-bottom: 20px;">
                     <a href="<?php echo URL_PAGE_MAU_THIET_KE . '&id=' . $productContent6[0]['id'] ?>">
@@ -106,11 +94,7 @@ $postContent6 = $content6[1];
                     for ($i = 1; $i <= 4; $i++) {
                     ?>
                         <div class="col-md-6" style="margin-bottom: 20px;">
-                            <img src="<?php if (empty($productContent6[$i]['photo'])) {
-                                            echo DEFAULT_IMG;
-                                        } else {
-                                            echo $productContent6[$i]['photo'];
-                                        } ?>" alt="" style="width: 100%; height: 215px;">
+                            <img src="<?php echo DEFAULT_IMG; ?>" alt="" class="img-fluid" style="max-width: 100%; width: auto; height: 215px; overflow: hidden; filter: brightness(1.1) contrast(0.96) saturate(1.37);">
                             <a href="<?php echo URL_PAGE_MAU_THIET_KE . '&id=' . $productContent6[$i]['id'] ?>">
                                 <?php
                                 $str = strip_tags($productContent6[$i]['description']);
