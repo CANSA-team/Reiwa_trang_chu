@@ -4,7 +4,7 @@ class NavBarModel extends Db
     //lấy danh sách NavBar
     public function getNavBar()
     {
-        $sql = parent::$conection->prepare('SELECT * FROM `navbar`');
+        $sql = parent::$conection->prepare('SELECT * FROM `navbar` ORDER BY `pos` ASC');
         return parent::select($sql);
     }
 

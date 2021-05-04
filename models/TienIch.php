@@ -142,6 +142,8 @@ class TienIch
         require "./PHPMailer-master/src/PHPMailer.php";
         require "./PHPMailer-master/src/SMTP.php";
         require "./PHPMailer-master/src/Exception.php";
+        $contactModel = new ContactModel();
+        $email = $contactModel->getContactById(4);
         $mail = new PHPMailer\PHPMailer\PHPMailer();
 
         $mail->CharSet = "UTF-8";
@@ -149,13 +151,13 @@ class TienIch
         $mail->Host = "kusamailer.tenten.cloud"; // SMTP servers change to localhost
         $mail->Smtp_port = "465";       // change smtp port
         $mail->SMTPAuth = true; // turn on SMTP authentication
-        $mail->Username = "hoanganh34k@reiwahouse.com.vn"; // tên tài khoản
+        $mail->Username = $email; // tên tài khoản
         $mail->Password = "Hoanganh11k!"; // mật khẩu
 
-        $mail->From = "hoanganh34k@reiwahouse.com.vn";
+        $mail->From = $email;
         $mail->FromName = $from_name;
         $mail->AddAddress($nguoi_nhan); //email người nhận
-        $mail->AddReplyTo("hoanganh34k@gmail.com", "HoangAnh");  //email trả lời
+        $mail->AddReplyTo($email, "ReiwaHouse");  //email trả lời
 
         $mail->WordWrap = 50; // set word wrap
 

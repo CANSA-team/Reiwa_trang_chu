@@ -36,8 +36,8 @@ $content5 = setContent5();
                             <input id="content" name="content" type="text" class="form-control is-valid" id="validationServerUsername33" placeholder="Nội dung" aria-describedby="inputGroupPrepend33" required="">
                         </div>
                         <div class="btn-more-product2 btn-trapanes">
-                            <div onclick="getMailCustomer()" style="padding-left: 20px; padding-right: 20px; padding-bottom: 5px;padding-top: 5px; background: #1a75bc; color: white;">Gửi</div>
-                        </div>
+                            <div onclick="getMailCustomer()" style="cursor: pointer;padding-left: 20px; padding-right: 20px; padding-bottom: 5px;padding-top: 5px; background: #1a75bc; color: white;">Gửi</div>
+                        </div>  
                     </form>
                 </div>
             </div>

@@ -14,4 +14,3 @@ foreach ($navbar as $item) {
     $content = '<li class="nav-item "><a href="'.$item['url'].'" class="nav-text-style nav-padding is-active">'.$item['name'].'</a>'.$dropdown.'</li>';
     echo $content;
 }
-
