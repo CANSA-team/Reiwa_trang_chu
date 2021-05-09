@@ -9,6 +9,12 @@ getHeader();
 ?>
 <div id="content" class="full_width posts">
     <div class="container detail_post">
+        <?php
+        $check = $page['id_classify'] == 3;
+        if ($check) {
+            getDichVu();
+        }
+        ?>
         <div class="row fix-safari">
             <div class="col-xs-12 col-md-8 col-lg-9">
                 <article class="box_content read bg_white m-t-12">

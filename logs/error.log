@@ -1,1 +1,4 @@
 [Thu Apr 29 17:09:15.025265 2021] [core:error] [pid 15608:tid 1160] (20024)The given path is misformatted or contained invalid characters: [client ::1:64043] AH00127: Cannot map GET /%3Cbr%20/%3E%3Cfont%20size='1'%3E%3Ctable%20class='xdebug-error%20xe-notice'%20dir='ltr'%20border='1'%20cellspacing='0'%20cellpadding='1'%3E%3Ctr%3E%3Cth%20align='left'%20bgcolor=' HTTP/1.1 to file, referer: http://reiwatrangchu.vn/
+[Mon May 10 03:43:09.460987 2021] [php7:error] [pid 19832:tid 1184] [client ::1:54745] script 'D:/git/Reiwa_trang_chu/dichvu.php' not found or unable to stat
+[Mon May 10 03:43:16.798962 2021] [php7:error] [pid 19832:tid 1196] [client ::1:54746] script 'D:/git/Reiwa_trang_chu/dichvu.php' not found or unable to stat
+[Mon May 10 03:44:26.406552 2021] [php7:error] [pid 19832:tid 1200] [client ::1:54777] script 'D:/git/Reiwa_trang_chu/content1.php' not found or unable to stat

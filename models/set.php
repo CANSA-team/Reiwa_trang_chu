@@ -170,6 +170,7 @@ function setPage()
             break;
         case 'du_an':
         case 'tin_tuc':
+        case 'dich_vu':
             $postModel = new PostModel();
             $page = $postModel->getPost($id);
             break;
@@ -217,6 +218,13 @@ function setBar()
     return $list;
 }
 
+function setDichVu()
+{
+    $postModel = new PostModel();
+    $list = $postModel->getPostClassify(8);
+    return $list;
+}
+
 function setNavBar()
 {
     $navbarModel = new NavBarModel();
@@ -240,6 +248,7 @@ function setHeader()
         'xuong_san_xuat' => 'ReiHouse-Xưởng Sản Xuất',
         'search' => 'ReiHouse-Tìm Kiếm',
         'bao_hanh' => 'ReiHouse-Bảo Hành',
+        'dich_vu' => 'ReiHouse-Dịch Vụ',
     ];
     $title = $arrTitlePage[$_GET['type']];
 

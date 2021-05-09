@@ -10,4 +10,5 @@ getContent7();
 getContent8();
 getFooter();
 
+getDichVu();
 ?>

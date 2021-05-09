@@ -1,7 +1,4 @@
 var slideIndex = 1;
-const items = document.querySelectorAll('.nav-text-style');
-const background = "#007cba";
-const color = "white";
 var view_more = document.getElementById("xemthem");
 let view = document.getElementById("product-category");
 const id_staff = document.querySelectorAll('.staff-id');
@@ -50,32 +47,6 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
-
-function handleIndicator(el) {
-    items.forEach(function (item) {
-        item.classList.remove('is-active');
-        item.removeAttribute('style');
-    });
-    el.classList.add('is-active');
-    el.style.background = background;
-    el.style.color = color;
-}
-
-
-items.forEach(function (item) {
-    item.addEventListener('click', function (e) {
-        handleIndicator(e.target);
-    });
-    item.classList.contains('is-active') && handleIndicator(item);
-});
-
-document.querySelectorAll('.nav-text-style-1').forEach((item) => {
-    item.addEventListener('click', (e) => {
-        handleIndicator(e.target.closest('.dropdown').previousElementSibling);
-    })
-});
-
-
 
 function GET_PRODUCE(id) {
     console.log(id);
@@ -149,7 +120,7 @@ id_staff.forEach(element => {
                 // alert(response.name);
                 $('.nhan-su__name').html(response.name);
             },
-            error: function (err) {  
+            error: function (err) {
                 console.error(err);
             }
         });
@@ -198,3 +169,7 @@ $(document).ready(function () {
     });
 });
 
+// dich vu
+$('#myCarousel').carousel({
+    interval: 5000
+})

@@ -14,6 +14,11 @@ function getBar()
     include "view/template/bar.php";
 }
 
+function getDichVu()
+{
+    include "view/template/dichvu.php";
+}
+
 function getRelate()
 {
     include "view/template/relate.php";

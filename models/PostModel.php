@@ -79,7 +79,7 @@ class PostModel extends Db
     //lấy tất cả post theo classify
     public function getPostClassify($id)
     {
-        $sql = parent::$conection->prepare('SELECT * FROM `post` JOIN `classify` ON classify.id = post.id WHERE classify.id = ?');
+        $sql = parent::$conection->prepare('SELECT * FROM `post`  WHERE `id_classify` = ?');
         $sql->bind_param('i', $id);
         return parent::select($sql);
     }

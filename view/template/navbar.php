@@ -13,6 +13,11 @@ foreach ($navbar as $item) {
         }
         $dropdown .= '</ul>';
     }
-    $content = '<li class="nav-item item-nav"><a href="' . $item['url'] . '" class="nav-text-style nav-padding nav-a is-active">' . $item['name'] . '</a>' . $dropdown . '</li>';
+    $active = '';
+    if (!empty($_GET['pos'])) {
+        $active = ($item['pos']==$_GET['pos'])?'is-active':'';
+    }
+        $pos =$item['url'] != './'?"&pos=".$item['pos']:"?pos=".$item['pos'];
+    $content = '<li class="nav-item item-nav"><a href="' . $item['url'] .$pos. '" class="nav-text-style nav-padding nav-a '.$active.'">' . $item['name'] . '</a>' . $dropdown . '</li>';
     echo $content;
 }

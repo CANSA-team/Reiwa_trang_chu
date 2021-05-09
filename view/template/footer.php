@@ -38,6 +38,7 @@ $contact = $contactModel->getContact();
     </div>
 </div>
 <script src="./public/js/myjs/<?php echo empty($_GET['action'])?'index':$_GET['action']?>.js"></script>
+<script src="./public/js/myjs/header.js"></script>
 <script src="/public/js/bootstrap.min.js"></script>
 </body>
 

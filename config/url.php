@@ -7,6 +7,7 @@ define("URL_PAGE_MAU_THIET_KE", "./?action=page&type=thiet_ke");
 
 define("URL_PAGE", "./?action=page&type=");
 
+define("URL_DICH_VU","./?action=page&type=dich_vu");
 define("URL_DU_AN", "./?action=post&type=du_an");
 define("URL_TIN_TUC", "./?action=post&type=tin_tuc");
 define("URL_TRANG_CHU", "./");
