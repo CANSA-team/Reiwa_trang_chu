@@ -9,17 +9,13 @@
 
 <div class="des col-xs-12 text-justify" style="margin-top: 10px; ">
     <?php
-    $i = 0;
-    foreach (setBar() as $value) {
-        if ($i == 4) {
-            break;
-        }
+    $arr = array_slice(setBar(), 0, 4);
+    foreach ($arr as $value) :
     ?>
         <div class="a" style="margin-bottom: 5px;">
             <a href=""><?php echo $value['name'] ?></a>
         </div>
     <?php
-        $i++;
-    }
+    endforeach
     ?>
 </div>

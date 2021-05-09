@@ -14,6 +14,14 @@ class NhanSuModel extends Db
         return parent::select($sql);
     }
 
+    //lấy nhân sự bằng id
+    public function getNhanSuByID($id)
+    {
+        $sql = parent::$conection->prepare('SELECT * FROM `nhansu` WHERE id=?');
+        $sql->bind_param('i',$id);
+        return parent::select($sql);
+    }
+
     //lấy danh sách nhân sự (trang chủ)
     public function getNhanSuActive()
     {

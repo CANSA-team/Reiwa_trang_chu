@@ -11,15 +11,7 @@ class Model
         $listProduct = $productModel->getProductNew();
         $listResult = array_merge($listPost, $listProduct);
         $listResult = TienIch::sort_ngay_dang($listResult);
-        $result = [];
-        if(count($listResult)>7){
-            for ($i=0; $i < 7; $i++) { 
-                $result[] = $listResult[$i];
-            }
-        }
-        else{
-            $result = $listResult;
-        }
+        $result = array_slice($listResult,0,7);
         return $result;
     }
 

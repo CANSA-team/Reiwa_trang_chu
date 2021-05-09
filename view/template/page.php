@@ -1,6 +1,6 @@
 <?php
 $page = setPage();
-if (empty($page['final_time'])) {
+if (!empty($page['view_count'])) {
     Model::updatePostView($page['id'], $page['view_count'] + 1);
 } else {
     Model::updateProductView($page['id'], $page['view'] + 1);

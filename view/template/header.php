@@ -11,7 +11,10 @@ $contact = $contactModel->getContact();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title ?></title>
-    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./public/css/bootstrap.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./public/css/all.min.css">
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/slick-theme.css">
@@ -22,7 +25,6 @@ $contact = $contactModel->getContact();
     <link rel="stylesheet" href="./public/css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/public/images/ReiwaHouse_logo_final.svg">
-    <script src="./public/js/jquery.js"></script>
     <script src="./public/js/stick.js"></script>
 </head>
 
@@ -56,7 +58,7 @@ $contact = $contactModel->getContact();
                         <div class="top-search-all">
                             <input type="text" name="action" value="post" hidden>
                             <input type="text" name="type" value="search" hidden>
-                            
+
                             <input class="top-search" id="search-input" type="search" name="value" placeholder="Tìm Kiếm" aria-label="Search">
                             <button class="top-btn-search" id="action-search" type="submit"><i class="fas fa-search"></i></button>
                         </div>
@@ -66,7 +68,7 @@ $contact = $contactModel->getContact();
         </div>
     </div>
 
-  
+
 
     <!-- Nav -->
     <nav class="navbar navbar-expand-sm navbar-light bg-white sticky-top pos-nav">
